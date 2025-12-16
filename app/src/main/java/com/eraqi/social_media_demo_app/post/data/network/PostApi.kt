@@ -7,4 +7,7 @@ interface PostApi {
 
     @GET("posts")
     suspend fun getPosts(): List<NetworkPost>
+
+    @GET("since")
+    suspend fun since():List<NetworkPost>
 }
