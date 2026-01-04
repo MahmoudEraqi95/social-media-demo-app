@@ -28,4 +28,11 @@ class PostViewModel @Inject constructor(
             }
         }
     }
+
+    fun incrementalSync(lastVersion: Int) {
+        viewModelScope.launch {
+            val changes = repository.syncSince(lastVersion)
+            // merge into local DB (handle deleted = true)
+        }
+    }
 }
