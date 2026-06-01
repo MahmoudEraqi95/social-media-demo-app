@@ -1,6 +1,9 @@
 package com.eraqi.social_media_demo_app.post.data.network
 
 import com.eraqi.social_media_demo_app.post.data.NetworkPost
+import com.google.gson.JsonElement
+
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
@@ -11,7 +14,7 @@ import retrofit2.http.Path
 interface PostApi {
 
     @GET("posts")
-    suspend fun getPosts(): List<NetworkPost>
+    suspend fun getPosts(): Response<JsonElement>
 
 
     @GET("posts/since/{version}")

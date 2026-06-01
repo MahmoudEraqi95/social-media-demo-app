@@ -58,3 +58,9 @@ internal fun PostEntity.toPost(): Post{
         Date(this.updatedAt)
     )
 }
+
+sealed class PostListingResult{
+    data class Success(val posts: List<Post>): PostListingResult()
+    data class Error(val message: String): PostListingResult()
+
+}
