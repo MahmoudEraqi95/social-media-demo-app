@@ -10,9 +10,9 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
+import javax.inject.Singleton
 
-@Module
-@InstallIn(SingletonComponent::class)
+@Singleton
 class UserPreferences @Inject constructor(
     private val dataStore: DataStore<Preferences>
 ) {

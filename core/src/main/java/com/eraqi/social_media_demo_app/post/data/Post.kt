@@ -37,7 +37,7 @@ data class NetworkPost(
     val deleted: Boolean = false
 )
 
-internal fun NetworkPost.toPost(): Post{
+fun NetworkPost.toPost(): Post{
     return Post(
         this.id,
         this.user,
@@ -48,7 +48,7 @@ internal fun NetworkPost.toPost(): Post{
     )
 }
 
-internal fun PostEntity.toPost(): Post{
+fun PostEntity.toPost(): Post{
     return Post(
         this.id,
         this.user,
