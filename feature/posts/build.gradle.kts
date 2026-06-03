@@ -28,6 +28,7 @@ android {
 }
 
 dependencies {
+    lintChecks(project(":lint"))
     implementation(project(":core"))
 
     implementation(libs.androidx.core.ktx)

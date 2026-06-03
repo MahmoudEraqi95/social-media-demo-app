@@ -23,4 +23,5 @@ rootProject.name = "social-media-demo-app"
 include(":app")
 include(":core")
 include(":feature:posts")
+include(":lint")
  

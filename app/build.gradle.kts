@@ -42,6 +42,7 @@ android {
 }
 
 dependencies {
+    lintChecks(project(":lint"))
     implementation(project(":feature:posts"))
     implementation(project(":core"))
 
